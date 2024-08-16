@@ -70,7 +70,6 @@ export default function App() {
 			animated: true,
 			id: `${edges.length} + 1`,
 		};
-    const _edges = addEdge(edge, edges)
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
 	},[]);
 
