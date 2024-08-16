@@ -4,15 +4,9 @@
   font-weight: 400;
 }
 
-body {
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-}
-
+html,
+body,
 #root {
-  margin: 3rem;
-  height: 40rem;
-  width: 40rem;
-  background-color: #aaa;
+  height: 100%;
+  margin: 0;
 }
