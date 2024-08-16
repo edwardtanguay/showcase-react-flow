@@ -10,12 +10,14 @@ export function PositionLoggerNode({
 	const y = `${Math.round(positionAbsoluteY)} px`;
 
 	return (
-		<div className="react-flow__node-default">
-			{data.label && <div>{data.label}</div>}
+		<div className="bg-green-300 p-2 rounded border border-green-700 flex justify-center flex-col">
+			<div>{data.label && <div>{data.label}</div>}</div>
 
-			<div className="positionArea">
-				<p>x = {x}</p>
-				<p>y = {y}</p>
+			<div className="positionArea flex justify-center">
+				<div>
+					<p>x = {x}</p>
+					<p>y = {y}</p>
+				</div>
 			</div>
 
 			<Handle type="source" position={Position.Right} />
