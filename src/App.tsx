@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
 	ReactFlow,
 	Node,
@@ -6,8 +7,11 @@ import {
 	Controls,
 	useNodesState,
 	useEdgesState,
+	addEdge,
+  Connection,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
+import { useCallback } from "react";
 
 const initialNodes: Node[] = [
 	{
@@ -54,17 +58,21 @@ const initialEdges: Edge[] = [
 		style: { stroke: "black" },
 		animated: true,
 	},
-	{
-		id: "3-4",
-		source: "3",
-		target: "4",
-		style: { stroke: "black" },
-	},
 ];
 
 export default function App() {
 	const [nodes, , onNodesChange] = useNodesState(initialNodes);
-	const [edges, , onEdgesChange] = useEdgesState(initialEdges);
+	const [edges, setEdges , onEdgesChange] = useEdgesState(initialEdges);
+
+	const onConnect = useCallback((connection: Connection) => {
+		const edge = {
+			...connection,
+			animated: true,
+			id: `${edges.length} + 1`,
+		};
+    const _edges = addEdge(edge, edges)
+		setEdges((prevEdges) => addEdge(edge, prevEdges));
+	},[]);
 
 	return (
 		<ReactFlow
@@ -72,6 +80,7 @@ export default function App() {
 			edges={edges}
 			onNodesChange={onNodesChange}
 			onEdgesChange={onEdgesChange}
+      onConnect={onConnect}
 			fitView
 		>
 			<Background />
