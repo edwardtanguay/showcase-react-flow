@@ -1,27 +1,51 @@
-import type { NodeTypes } from '@xyflow/react';
-
-import { PositionLoggerNode } from './PositionLoggerNode';
-import { AppNode } from './types';
+import { NodeTypes } from "@xyflow/react";
+import { PositionLoggerNode } from "./PositionLoggerNode";
+import { AppNode } from "./types";
 
 export const initialNodes: AppNode[] = [
-  { id: 'a', type: 'input', position: { x: 0, y: 0 }, data: { label: 'todos' } },
+	{
+		id: "1",
+		data: {
+			label: "Information",
+		},
+		position: { x: 0, y: 0 },
+		hidden: true,
+	},
+	{
+		id: "2",
+		data: {
+			label: "Welcome",
+		},
+		position: { x: 100, y: 50 },
+		selected: true,
+	},
+	{
+		id: "3",
+		data: {
+			label: "The Records",
+		},
+		position: { x: 260, y: 150 },
+		width: 130,
+		height: 130,
+	},
+	{
+		id: "4",
+		data: {
+			label: "The Overview",
+		},
+		position: { x: 390, y: 350 },
+		width: 130,
+		height: 130,
+	},
   {
-    id: 'b',
+    id: '5',
     type: 'position-logger',
-    position: { x: -310, y:220 },
-    data: { label: 'DRAG THIS' },
-  },
-  { id: 'c', position: { x: 100, y: 100 }, data: { label: 'image new websites' } },
-  {
-    id: 'd',
-    type: 'output',
-    position: { x: 0, y: 200 },
-    data: { label: 'with React Flow' },
-  },
-  { id: 'e', type: 'output', position: { x: -200, y: 140 }, data: { label: 'learn React Flow' } },
+    position: { x: 20, y: 140 },
+    data: { label: 'DRAG IT' },
+    height: 100
+  }
 ];
 
 export const nodeTypes = {
-  'position-logger': PositionLoggerNode,
-  // Add any of your custom nodes here!
+	'position-logger': PositionLoggerNode
 } satisfies NodeTypes;

@@ -1,42 +1,53 @@
-import { useCallback } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
 import {
-  ReactFlow,
-  Background,
-  Controls,
-  MiniMap,
-  addEdge,
-  useNodesState,
-  useEdgesState,
-  type OnConnect,
-} from '@xyflow/react';
+	ReactFlow,
+	Edge,
+	Background,
+	Controls,
+	useNodesState,
+	useEdgesState,
+	addEdge,
+  Connection,
+} from "@xyflow/react";
+import "@xyflow/react/dist/style.css";
+import { useCallback } from "react";
+import { initialNodes, nodeTypes } from "./nodes";
 
-import '@xyflow/react/dist/style.css';
-
-import { initialNodes, nodeTypes } from './nodes';
-import { initialEdges, edgeTypes } from './edges';
+const initialEdges: Edge[] = [
+	{
+		id: "2-3",
+		source: "2",
+		target: "3",
+		style: { stroke: "black" },
+		animated: true,
+	},
+];
 
 export default function App() {
-  const [nodes, , onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const onConnect: OnConnect = useCallback(
-    (connection) => setEdges((edges) => addEdge(connection, edges)),
-    [setEdges] 
-  );
+	const [nodes, , onNodesChange] = useNodesState(initialNodes);
+	const [edges, setEdges , onEdgesChange] = useEdgesState(initialEdges);
 
-  return (
-    <ReactFlow
+	const onConnect = useCallback((connection: Connection) => {
+		const edge:Edge = {
+			...connection,
+			animated: false,
+			id: `${edges.length} + 1`,
+		};
+		setEdges((prevEdges) => addEdge(edge, prevEdges));
+	},[]);
+
+	return (
+		<ReactFlow
       nodes={nodes}
       nodeTypes={nodeTypes}
-      onNodesChange={onNodesChange}
-      edges={edges}
-      edgeTypes={edgeTypes}
-      onEdgesChange={onEdgesChange}
+			edges={edges}
+			onNodesChange={onNodesChange}
+			onEdgesChange={onEdgesChange}
       onConnect={onConnect}
-      fitView={true}
-    >
-      <Background />
-      <MiniMap />
-      <Controls />
-    </ReactFlow>
-  );
+			fitView
+		>
+			<Background />
+			<Controls />
+		</ReactFlow>
+	);
 }

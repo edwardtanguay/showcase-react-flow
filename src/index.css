@@ -4,9 +4,21 @@
   font-weight: 400;
 }
 
-html,
-body,
+body {
+  background-color: #a8a4a4;
+  display: flex;
+  justify-content: center;
+}
+
 #root {
-  height: 100%;
-  margin: 0;
+  margin: 3rem;
+  height: 40rem;
+  width: 40rem;
+  background-color: rgb(235, 235, 181);
+}
+
+.positionArea {
+  color: #555;
+  font-family: monospace;
+  font-size: .6rem;
 }
