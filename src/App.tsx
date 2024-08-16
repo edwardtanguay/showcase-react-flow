@@ -67,14 +67,9 @@ export default function App() {
 	const onConnect = useCallback((connection: Connection) => {
 		const edge:Edge = {
 			...connection,
-      source: '',
-      target: '',
-      sourceHandle: '',
-      targetHandle: '',
-			animated: true,
+			animated: false,
 			id: `${edges.length} + 1`,
 		};
-    // const _edges = addEdge(edge, edges);
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
 	},[]);
 
