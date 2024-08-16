@@ -17,7 +17,6 @@ export const initialNodes: AppNode[] = [
 			label: "Welcome",
 		},
 		position: { x: 100, y: 50 },
-		selected: false,
 	},
 	{
 		id: "3",
@@ -39,9 +38,9 @@ export const initialNodes: AppNode[] = [
 	},
   {
     id: '5',
+    data: { label: 'Current Position:' },
     type: 'position-logger',
     position: { x: 20, y: 140 },
-    data: { label: 'DRAG IT' },
     height: 100
   }
 ];

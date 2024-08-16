@@ -11,7 +11,7 @@ export function PositionLoggerNode({
 
 	return (
 		<div className="react-flow__node-default">
-			{data.label && <div>Current Position:</div>}
+			{data.label && <div>{data.label}</div>}
 
 			<div className="positionArea">
 				<p>x = {x}</p>
