@@ -41,7 +41,8 @@ export const initialNodes: AppNode[] = [
     id: '5',
     type: 'position-logger',
     position: { x: 20, y: 140 },
-    data: {label: 'DRAG IT'}
+    data: { label: 'DRAG IT' },
+    height: 100
   }
 ];
 
