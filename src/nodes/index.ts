@@ -36,15 +36,15 @@ export const initialNodes: AppNode[] = [
 		width: 130,
 		height: 130,
 	},
-  {
-    id: '5',
-    data: { label: 'Current Position:' },
-    type: 'position-logger',
-    position: { x: 20, y: 140 },
-    height: 100
-  }
+	{
+		id: "5",
+		data: { label: "Current Position:" },
+		type: "position-logger",
+		position: { x: 20, y: 140 },
+		height: 100,
+	},
 ];
 
 export const nodeTypes = {
-	'position-logger': PositionLoggerNode
+	"position-logger": PositionLoggerNode,
 } satisfies NodeTypes;
