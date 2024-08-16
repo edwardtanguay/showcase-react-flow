@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {
 	ReactFlow,
-	Node,
 	Edge,
 	Background,
 	Controls,
@@ -12,43 +11,7 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useCallback } from "react";
-
-const initialNodes: Node[] = [
-	{
-		id: "1",
-		data: {
-			label: "Information",
-		},
-		position: { x: 0, y: 0 },
-		hidden: true,
-	},
-	{
-		id: "2",
-		data: {
-			label: "Welcome",
-		},
-		position: { x: 100, y: 50 },
-		selected: true,
-	},
-	{
-		id: "3",
-		data: {
-			label: "Records",
-		},
-		position: { x: 260, y: 150 },
-		width: 130,
-		height: 130,
-	},
-	{
-		id: "4",
-		data: {
-			label: "Overview",
-		},
-		position: { x: 390, y: 350 },
-		width: 130,
-		height: 130,
-	},
-];
+import { initialNodes } from "./nodes";
 
 const initialEdges: Edge[] = [
 	{
