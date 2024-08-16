@@ -4,20 +4,21 @@ import { type PositionLoggerNode } from "./types";
 export function PositionLoggerNode({
 	positionAbsoluteX,
 	positionAbsoluteY,
-	data
+	data,
 }: NodeProps<PositionLoggerNode>) {
-	const x = `${positionAbsoluteX}`;
-	const y = `${positionAbsoluteY}`;
+	const x = `${Math.round(positionAbsoluteX)} px`;
+	const y = `${Math.round(positionAbsoluteY)} px`;
 
 	return (
 		<div className="react-flow__node-default">
-			{data.label && <div>[{data.label}]</div>}
+			{data.label && <div>Current Position:</div>}
 
-			<div>
-				POS: {x} x {y}
+			<div className="positionArea">
+				<p>x = {x}</p>
+				<p>y = {y}</p>
 			</div>
 
-			<Handle type="source" position={Position.Right}/>
+			<Handle type="source" position={Position.Right} />
 		</div>
-	)
+	);
 }

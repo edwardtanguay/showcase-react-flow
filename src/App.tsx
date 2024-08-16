@@ -11,7 +11,7 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useCallback } from "react";
-import { initialNodes } from "./nodes";
+import { initialNodes, nodeTypes } from "./nodes";
 
 const initialEdges: Edge[] = [
 	{
@@ -38,7 +38,8 @@ export default function App() {
 
 	return (
 		<ReactFlow
-			nodes={nodes}
+      nodes={nodes}
+      nodeTypes={nodeTypes}
 			edges={edges}
 			onNodesChange={onNodesChange}
 			onEdgesChange={onEdgesChange}

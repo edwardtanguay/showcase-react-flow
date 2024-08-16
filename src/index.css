@@ -16,3 +16,9 @@ body {
   width: 40rem;
   background-color: rgb(235, 235, 181);
 }
+
+.positionArea {
+  color: #555;
+  font-family: monospace;
+  font-size: .6rem;
+}
