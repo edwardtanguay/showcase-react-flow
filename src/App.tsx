@@ -12,16 +12,7 @@ import {
 import "@xyflow/react/dist/style.css";
 import { useCallback } from "react";
 import { initialNodes, nodeTypes } from "./nodes";
-
-const initialEdges: Edge[] = [
-	{
-		id: "2-3",
-		source: "2",
-		target: "3",
-		style: { stroke: "black" },
-		animated: true,
-	},
-];
+import { initialEdges } from "./edges";
 
 export default function App() {
 	const [nodes, , onNodesChange] = useNodesState(initialNodes);

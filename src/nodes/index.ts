@@ -17,7 +17,7 @@ export const initialNodes: AppNode[] = [
 			label: "Welcome",
 		},
 		position: { x: 100, y: 50 },
-		selected: true,
+		selected: false,
 	},
 	{
 		id: "3",
