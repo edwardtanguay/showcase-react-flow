@@ -65,11 +65,16 @@ export default function App() {
 	const [edges, setEdges , onEdgesChange] = useEdgesState(initialEdges);
 
 	const onConnect = useCallback((connection: Connection) => {
-		const edge = {
+		const edge:Edge = {
 			...connection,
+      source: '',
+      target: '',
+      sourceHandle: '',
+      targetHandle: '',
 			animated: true,
 			id: `${edges.length} + 1`,
 		};
+    // const _edges = addEdge(edge, edges);
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
 	},[]);
 
