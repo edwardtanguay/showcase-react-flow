@@ -7,7 +7,7 @@ import {
 	useNodesState,
 	useEdgesState,
 	addEdge,
-  Connection,
+	Connection,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useCallback } from "react";
@@ -16,29 +16,31 @@ import { initialEdges } from "./edges";
 
 export default function App() {
 	const [nodes, , onNodesChange] = useNodesState(initialNodes);
-	const [edges, setEdges , onEdgesChange] = useEdgesState(initialEdges);
+	const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
 	const onConnect = useCallback((connection: Connection) => {
-		const edge:Edge = {
+		const edge: Edge = {
 			...connection,
 			animated: false,
 			id: `${edges.length} + 1`,
 		};
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
-	},[]);
+	}, []);
 
 	return (
-		<ReactFlow
-      nodes={nodes}
-      nodeTypes={nodeTypes}
-			edges={edges}
-			onNodesChange={onNodesChange}
-			onEdgesChange={onEdgesChange}
-      onConnect={onConnect}
-			fitView
-		>
-			<Background />
-			<Controls />
-		</ReactFlow>
+		<>
+			<ReactFlow
+				className="border-2 border-gray-500"
+				nodes={nodes}
+				nodeTypes={nodeTypes}
+				edges={edges}
+				onNodesChange={onNodesChange}
+				onEdgesChange={onEdgesChange}
+				onConnect={onConnect}
+			>
+				<Background />
+				<Controls />
+			</ReactFlow>
+		</>
 	);
 }
