@@ -26,10 +26,10 @@ export default function App() {
 			id: `${edges.length} + 1`,
 			label: "added",
 			labelStyle: {
-				fill: "black",
+				fill: "yellow",
 			},
 			labelBgStyle: {
-				fill: "yellow",
+				fill: "black",
 			},
 		};
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
