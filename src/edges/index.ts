@@ -16,4 +16,12 @@ export const initialEdges: Edge[] = [
 		animated: true,
 		label: "will result in"
 	},
+	{
+		id: "002-to-overview",
+		source: "9",
+		target: "4",
+		style: { stroke: "black" },
+		animated: true,
+		label: "link"
+	},
 ];
