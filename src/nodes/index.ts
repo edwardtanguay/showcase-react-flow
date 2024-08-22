@@ -38,9 +38,23 @@ export const initialNodes: AppNode[] = [
 	},
 	{
 		id: "5",
-		data: { label: "Current Position:" },
+		data: { label: "Current Position", bgcolor: "lightgreen" },
 		type: "position-logger",
 		position: { x: 20, y: 140 },
+		height: 100,
+	},
+	{
+		id: "6",
+		data: { label: "Has handle", bgcolor: "lightblue", hasHandle: true },
+		type: "position-logger",
+		position: { x: 20, y: 240 },
+		height: 100,
+	},
+	{
+		id: "7",
+		data: { label: "No handle", bgcolor: "beige", hasHandle: false },
+		type: "position-logger",
+		position: { x: 60, y: 540 },
 		height: 100,
 	},
 ];

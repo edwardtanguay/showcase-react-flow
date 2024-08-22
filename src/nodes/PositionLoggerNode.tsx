@@ -9,8 +9,21 @@ export function PositionLoggerNode({
 	const x = `${Math.round(positionAbsoluteX)} px`;
 	const y = `${Math.round(positionAbsoluteY)} px`;
 
+	const hasHandle = data.hasHandle ? data.hasHandle : false;
+
+	const getBgColor = (): string => {
+		if (positionAbsoluteY >= 400) {
+			return "tomato";
+		} else {
+			return data.bgcolor;
+		}
+	};
+
 	return (
-		<div className="bg-green-300 p-2 rounded border border-green-700 flex justify-center flex-col">
+		<div
+			style={{ backgroundColor: getBgColor() }}
+			className="p-2 rounFded border border-green-700 flex justify-center flex-col"
+		>
 			<div>{data.label && <div>{data.label}</div>}</div>
 
 			<div className="positionArea flex justify-center">
@@ -19,8 +32,7 @@ export function PositionLoggerNode({
 					<p>y = {y}</p>
 				</div>
 			</div>
-
-			<Handle type="source" position={Position.Right} />
+			{hasHandle && <Handle type="source" position={Position.Right} />}
 		</div>
 	);
 }
