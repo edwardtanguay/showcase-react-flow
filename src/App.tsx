@@ -24,7 +24,13 @@ export default function App() {
 			...connection,
 			animated: false,
 			id: `${edges.length} + 1`,
-			label: "added"
+			label: "added",
+			labelStyle: {
+				fill: "black",
+			},
+			labelBgStyle: {
+				fill: "yellow",
+			},
 		};
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
 	}, []);
@@ -42,7 +48,7 @@ export default function App() {
 			>
 				<Background />
 				<Controls />
-				<DividerLine/>
+				<DividerLine />
 			</ReactFlow>
 		</>
 	);

@@ -26,7 +26,7 @@ export const initialEdges: Edge[] = [
 		animated: true,
 		label: "linked",
 		labelStyle: {
-			fill: "#ddd"
+			fill: "#ddd",
 		},
 		labelBgStyle: {
 			fill: "#10165c",
