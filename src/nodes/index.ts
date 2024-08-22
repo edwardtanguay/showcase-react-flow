@@ -65,6 +65,15 @@ export const initialNodes: AppNode[] = [
 		position: { x: 480, y: 10 },
 		width: 70,
 		height: 70,
+		style: {
+			backgroundColor: "#353c85",
+			color: "#ddd",
+			fontSize: "1.3rem",
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			textAlign: "center"
+		},
 	},
 	{
 		id: "9",
@@ -74,6 +83,15 @@ export const initialNodes: AppNode[] = [
 		position: { x: 556, y: 10 },
 		width: 70,
 		height: 70,
+		style: {
+			backgroundColor: "#10165c",
+			color: "#ddd",
+			fontSize: "1.3rem",
+			display: "flex",
+			alignItems: "center",
+			justifyContent: "center",
+			textAlign: "center"
+		},
 	},
 ];
 

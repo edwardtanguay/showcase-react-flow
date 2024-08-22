@@ -14,14 +14,22 @@ export const initialEdges: Edge[] = [
 		target: "4",
 		style: { stroke: "black" },
 		animated: true,
-		label: "will result in"
+		label: "will result in",
 	},
 	{
 		id: "002-to-overview",
 		source: "9",
+		style: {
+			stroke: "black",
+		},
 		target: "4",
-		style: { stroke: "black" },
 		animated: true,
-		label: "link"
+		label: "linked",
+		labelStyle: {
+			fill: "#ddd"
+		},
+		labelBgStyle: {
+			fill: "#10165c",
+		},
 	},
 ];
