@@ -13,6 +13,7 @@ import "@xyflow/react/dist/style.css";
 import { useCallback } from "react";
 import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges } from "./edges";
+import { DividerLine } from "./components/DividerLine";
 
 export default function App() {
 	const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -41,6 +42,7 @@ export default function App() {
 			>
 				<Background />
 				<Controls />
+				<DividerLine/>
 			</ReactFlow>
 		</>
 	);

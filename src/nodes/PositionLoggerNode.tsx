@@ -12,7 +12,7 @@ export function PositionLoggerNode({
 	const hasHandle = data.hasHandle ? data.hasHandle : false;
 
 	const getBgColor = (): string => {
-		if (positionAbsoluteY >= 400) {
+		if (positionAbsoluteY >= 530) {
 			return "tomato";
 		} else {
 			return data.bgcolor;
