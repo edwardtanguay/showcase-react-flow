@@ -14,5 +14,6 @@ export const initialEdges: Edge[] = [
 		target: "4",
 		style: { stroke: "black" },
 		animated: true,
+		label: "will result in"
 	},
 ];

@@ -57,6 +57,24 @@ export const initialNodes: AppNode[] = [
 		position: { x: 60, y: 540 },
 		height: 100,
 	},
+	{
+		id: "8",
+		data: {
+			label: "001",
+		},
+		position: { x: 480, y: 10 },
+		width: 70,
+		height: 70,
+	},
+	{
+		id: "9",
+		data: {
+			label: "002",
+		},
+		position: { x: 556, y: 10 },
+		width: 70,
+		height: 70,
+	},
 ];
 
 export const nodeTypes = {

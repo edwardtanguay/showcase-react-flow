@@ -23,6 +23,7 @@ export default function App() {
 			...connection,
 			animated: false,
 			id: `${edges.length} + 1`,
+			label: "added"
 		};
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
 	}, []);
