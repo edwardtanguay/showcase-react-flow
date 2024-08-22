@@ -25,6 +25,9 @@ export default function App() {
 			animated: false,
 			id: `${edges.length} + 1`,
 			label: "added",
+			style: {
+				stroke: "#222",
+			},
 			labelStyle: {
 				fill: "yellow",
 			},
