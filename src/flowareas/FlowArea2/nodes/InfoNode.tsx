@@ -9,10 +9,10 @@ export function InfoNode({
 	const label = !data.label ? 'no text' : data.label;
 	return (
 		<div
-			style={{ boxShadow: "3px 3px 5px 0px #555", transform: `rotate(${data})` }}
-			className="p-2 border border-gray-400 flex justify-center items-center shadow-2xl h-[4rem] w-[4rem] bg-yellow-100"
+			style={{ boxShadow: "3px 3px 5px 0px #555", transform: `rotate(${data.rotate})` }}
+			className="p-1 border border-gray-400 shadow-2xl h-[8rem] w-[8rem] bg-yellow-100"
 		>
-			<div className="text-xs" style={{ color: textColor }}>{label}</div>
+			<div className="text-[.8rem]" style={{ color: textColor }}>{label}</div>
 		</div>
 	);
 }
