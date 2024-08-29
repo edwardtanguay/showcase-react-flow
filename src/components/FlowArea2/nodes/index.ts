@@ -5,10 +5,10 @@ export const initialNodes: AppNode[] = [
 	{
 		id: "1",
 		data: {
-			label: "Single",
+			label: "Static Info",
 		},
-		position: { x: 0, y: 0 },
-		hidden: true,
+		position: { x: 30, y: 30 },
+		hidden: false,
 	},
 ];
 
