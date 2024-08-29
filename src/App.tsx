@@ -1,5 +1,5 @@
-import { FlowArea1 } from "./components/FlowArea1";
-import { FlowArea2 } from "./components/FlowArea2";
+import { FlowArea1 } from "./flowareas/FlowArea1";
+import { FlowArea2 } from "./flowareas/FlowArea2";
 
 export default function App() {
 	return (
