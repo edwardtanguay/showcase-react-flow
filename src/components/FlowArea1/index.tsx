@@ -39,7 +39,10 @@ export const FlowArea1 = () => {
 	}, []);
 	return (
 		<section>
-			<h2>React Flow 1</h2>
+			<header className="w-[40rem]">
+			<h2 className="text-xl">React Flow: Basics</h2>
+			<p className="italic mb-1 text-sm" style={{lineHeight: '.9rem'}}>Normal nodes, ksjd fksjf skdjf ksdf jkdfj dkjf  custom nodes that are interactive (drag below line, they turn red)</p>
+			</header>
 			<div style={{ width: '40rem', height: '40rem', border: '1px solid black' }}>
 				<ReactFlow
 					className="bg-yellow-200 border-2 border-gray-500"
