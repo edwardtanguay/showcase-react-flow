@@ -17,6 +17,13 @@ export const initialNodes: AppNode[] = [
 		position: { x: 20, y: 100 },
 		height: 100,
 	},
+	{
+		id: "3",
+		data: { label: "Info 002" },
+		type: "info-node",
+		position: { x: 20, y: 180 },
+		height: 100,
+	},
 ];
 
 export const nodeTypes = {
