@@ -22,16 +22,10 @@ export function InfoNode({
 	return (
 		<div
 			style={{ backgroundColor: getBgColor() }}
-			className="p-2 rounFded border border-green-700 flex justify-center flex-col"
+			className="p-2 border border-green-700 flex justify-center flex-col shadow-2xl h-[4rem] w-[4rem]"
 		>
-			<div>{data.label && <div>{data.label}</div>}</div>
+			<div>{data.label && <div className="text-xs">{data.label}</div>}</div>
 
-			<div className="positionArea flex justify-center">
-				<div>
-					<p>x = {x}</p>
-					<p>y = {y}</p>
-				</div>
-			</div>
 			{hasHandle && <Handle type="source" position={Position.Right} />}
 		</div>
 	);
