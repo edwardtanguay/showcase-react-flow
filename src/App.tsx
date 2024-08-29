@@ -71,7 +71,7 @@ export default function App() {
 					<h2>React Flow 1</h2>
 					<div style={{ width: '40rem', height: '40rem', border: '1px solid black' }}>
 						<ReactFlow
-							className="bg-yellow-500 border-2 border-gray-500"
+							className="bg-yellow-200 border-2 border-gray-500"
 							nodes={nodes}
 							nodeTypes={nodeTypes}
 							edges={edges}
@@ -89,7 +89,7 @@ export default function App() {
 					<h2>React Flow 2</h2>
 					<div style={{ width: '40rem', height: '40rem', border: '1px solid black' }}>
 						<ReactFlow
-							className="bg-red-500 border-2 border-gray-500"
+							className="bg-yellow-400 border-2 border-gray-500"
 							nodes={nodes}
 							nodeTypes={nodeTypes}
 							edges={edges}
