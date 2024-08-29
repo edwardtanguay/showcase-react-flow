@@ -1,11 +1,11 @@
 import { Handle, type NodeProps, Position } from "@xyflow/react";
-import { type PositionLoggerNode } from "./types";
+import { type InfoNode } from "./types";
 
-export function PositionLoggerNode({
+export function InfoNode({
 	positionAbsoluteX,
 	positionAbsoluteY,
 	data,
-}: NodeProps<PositionLoggerNode>) {
+}: NodeProps<InfoNode>) {
 	const x = `${Math.round(positionAbsoluteX)} px`;
 	const y = `${Math.round(positionAbsoluteY)} px`;
 

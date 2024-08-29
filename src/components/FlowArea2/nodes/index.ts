@@ -1,17 +1,24 @@
 import { NodeTypes } from "@xyflow/react";
 import { AppNode } from "./types";
-import { PositionLoggerNode } from "./PositionLoggerNode";
+import { InfoNode } from "./InfoNode";
 
 export const initialNodes: AppNode[] = [
 	{
 		id: "1",
 		data: { label: "Note 001", bgcolor: "lemonchiffon" },
-		type: "position-logger",
-		position: { x: 20, y: 140 },
+		type: "info-node",
+		position: { x: 20, y: 20 },
+		height: 100,
+	},
+	{
+		id: "2",
+		data: { label: "Note 002", bgcolor: "lemonchiffon" },
+		type: "info-node",
+		position: { x: 20, y: 100 },
 		height: 100,
 	},
 ];
 
 export const nodeTypes = {
-	"position-logger": PositionLoggerNode,
+	"info-node": InfoNode,
 } satisfies NodeTypes;
