@@ -11,7 +11,7 @@ import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges } from "./edges";
 
 export const FlowArea2 = () => {
-	const [nodes] = useNodesState(initialNodes);
+	const [nodes,,onNodesChange] = useNodesState(initialNodes);
 	const [edges] = useEdgesState(initialEdges);
 
 	return (
@@ -22,6 +22,7 @@ export const FlowArea2 = () => {
 					className="bg-yellow-400 border-2 border-gray-500"
 					nodes={nodes}
 					nodeTypes={nodeTypes}
+					onNodesChange={onNodesChange}
 					edges={edges}
 				>
 					<Background />
