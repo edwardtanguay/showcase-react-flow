@@ -11,9 +11,9 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { useCallback } from "react";
-import { initialNodes, nodeTypes } from "../../nodes";
-import { initialEdges } from "../../edges";
-import { DividerLine } from "../DividerLine";
+import { initialNodes, nodeTypes } from "../FlowArea1/nodes";
+import { initialEdges } from "../FlowArea1/edges";
+import { DividerLine } from "../FlowArea1/DividerLine";
 
 export const FlowArea2 = () => {
 	const [nodes, , onNodesChange] = useNodesState(initialNodes);
