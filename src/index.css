@@ -4,15 +4,6 @@
 
 body {
   background-color: #a8a4a4;
-  display: flex;
-  justify-content: center;
-}
-
-#root {
-  margin: 1rem 3rem 3rem 3rem;
-  height: 40rem;
-  width: 40rem;
-  background-color: rgb(235, 235, 181);
 }
 
 .positionArea {

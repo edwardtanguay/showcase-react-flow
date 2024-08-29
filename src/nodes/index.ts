@@ -52,7 +52,7 @@ export const initialNodes: AppNode[] = [
 	},
 	{
 		id: "7",
-		data: { label: "No handle", bgcolor: "beige", hasHandle: false },
+		data: { label: "No handle", bgcolor: "blue", hasHandle: false },
 		type: "position-logger",
 		position: { x: 60, y: 540 },
 		height: 100,
