@@ -7,9 +7,8 @@ import {
 	useEdgesState,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import { initialNodes, nodeTypes } from "../FlowArea1/nodes";
-import { initialEdges } from "../FlowArea1/edges";
-import { DividerLine } from "../FlowArea1/DividerLine";
+import { initialNodes, nodeTypes } from "./nodes";
+import { initialEdges } from "./edges";
 
 export const FlowArea2 = () => {
 	const [nodes] = useNodesState(initialNodes);
@@ -27,7 +26,6 @@ export const FlowArea2 = () => {
 				>
 					<Background />
 					<Controls showInteractive={false} />
-					<DividerLine />
 				</ReactFlow>
 			</div>
 		</section>
