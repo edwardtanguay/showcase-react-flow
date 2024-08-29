@@ -12,7 +12,7 @@ export const initialNodes: AppNode[] = [
 	},
 	{
 		id: "2",
-		data: { label: "Info 002" },
+		data: {},
 		type: "info-node",
 		position: { x: 20, y: 100 },
 		height: 100,
