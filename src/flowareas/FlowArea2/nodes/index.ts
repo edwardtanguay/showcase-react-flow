@@ -2,14 +2,15 @@ import { NodeTypes } from "@xyflow/react";
 import { AppNode } from "./types";
 import { InfoNode } from "./InfoNode";
 import notes from "../data/notes.json";
-import * as tools from '../../../tools';
+import * as tools from "../../../tools";
 
 export const initialNodes: AppNode[] = notes.map((note, index) => {
-	const x = 20 + (index * tools.getRandomNumberBetween(5,10));
-	const y = 20 + index * tools.getRandomNumberBetween(15, 30);
+	const x = 5 * tools.getRandomNumberBetween(5, 20);
+	const y = 5 * tools.getRandomNumberBetween(5, 20);
+	const rotate = `${tools.getRandomNumberBetween(-20, 20)}deg`;
 	return {
 		id: `${index + 1}`,
-		data: { label: note, rotate: '28deg' },
+		data: { label: note, rotate },
 		type: "info-node",
 		position: { x, y },
 		height: 100,
