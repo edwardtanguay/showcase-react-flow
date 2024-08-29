@@ -14,6 +14,7 @@ import { useCallback } from "react";
 import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges } from "./edges";
 import { DividerLine } from "./DividerLine";
+import { FlowAreaWrapper } from "../FlowAreaWrapper";
 
 export const FlowArea1 = () => {
 	const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -38,26 +39,20 @@ export const FlowArea1 = () => {
 		setEdges((prevEdges) => addEdge(edge, prevEdges));
 	}, []);
 	return (
-		<section>
-			<header className="w-[40rem]">
-			<h2 className="text-xl">React Flow: Basics</h2>
-			<p className="italic mb-1 text-sm" style={{lineHeight: '.9rem'}}>Normal nodes, ksjd fksjf skdjf ksdf jkdfj dkjf  custom nodes that are interactive (drag below line, they turn red)</p>
-			</header>
-			<div style={{ width: '40rem', height: '40rem', border: '1px solid black' }}>
-				<ReactFlow
-					className="bg-yellow-200 border-2 border-gray-500"
-					nodes={nodes}
-					nodeTypes={nodeTypes}
-					edges={edges}
-					onNodesChange={onNodesChange}
-					onEdgesChange={onEdgesChange}
-					onConnect={onConnect}
-				>
-					<Background />
-					<Controls showInteractive={false} />
-					<DividerLine />
-				</ReactFlow>
-			</div>
-		</section>
+		<FlowAreaWrapper title="React Flow: Basics" subtitle="Normal nodes, custom nodes that are interactive (drag below line, they turn red)">
+			<ReactFlow
+				className="bg-yellow-200 border-2 border-gray-500"
+				nodes={nodes}
+				nodeTypes={nodeTypes}
+				edges={edges}
+				onNodesChange={onNodesChange}
+				onEdgesChange={onEdgesChange}
+				onConnect={onConnect}
+			>
+				<Background />
+				<Controls showInteractive={false} />
+				<DividerLine />
+			</ReactFlow>
+		</FlowAreaWrapper>
 	)
 }
