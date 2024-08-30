@@ -7,7 +7,7 @@ export function EmployeeNode({
 
 	return (
 		<div>
-			<div>{data.employee.firstName}</div>
+			<div>{data.employee.firstName} {data.employee.lastName}</div>
 		</div>
 	);
 }
