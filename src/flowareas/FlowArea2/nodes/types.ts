@@ -14,7 +14,6 @@ type EmployeeNodeType = {
 	employee: Employee
 }
 
-
 export type InfoNode = Node<InfoNodeType, "infoNode">;
 export type EmployeeNode = Node<EmployeeNodeType, "employeeNode">;
 export type AppNode = InfoNode | EmployeeNode;
