@@ -5,5 +5,16 @@ type InfoNodeType = {
 	rotate: string;
 };
 
+type Employee = {
+	firstName: string;
+	lastName: string;
+}
+
+type EmployeeNodeType = {
+	employee: Employee
+}
+
+
 export type InfoNode = Node<InfoNodeType, "infoNode">;
-export type AppNode = InfoNode;
+export type EmployeeNode = Node<EmployeeNodeType, "employeeNode">;
+export type AppNode = InfoNode | EmployeeNode;
