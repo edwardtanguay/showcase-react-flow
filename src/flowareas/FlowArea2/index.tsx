@@ -17,7 +17,7 @@ export const FlowArea2 = () => {
 
 	return (
 		<section>
-			<FlowAreaWrapper title="React Flow: Data-Loaded Nodes" subtitle="Custom node types InfoNode and EmployeeNode, both being loaded from JSON files.">
+			<FlowAreaWrapper title="React Flow: Data-Loaded Nodes" subtitle="Custom node types MessageNode and EmployeeNode, both being loaded from JSON files.">
 				<ReactFlow
 					className="bg-yellow-400 border-2 border-gray-500"
 					nodes={nodes}

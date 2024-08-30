@@ -1,9 +1,9 @@
 import { type NodeProps } from "@xyflow/react";
-import { type InfoNode } from "./types";
+import { type MessageNode } from "./types";
 
-export function InfoNode({
+export function MessageNode({
 	data,
-}: NodeProps<InfoNode>) {
+}: NodeProps<MessageNode>) {
 
 	const textColor = !data.label ? '#ccc' : '#000';
 	const label = !data.label ? 'no text' : data.label;

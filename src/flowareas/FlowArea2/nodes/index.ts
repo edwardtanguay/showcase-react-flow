@@ -1,6 +1,6 @@
 import { NodeTypes } from "@xyflow/react";
 import { AppNode } from "./types";
-import { InfoNode } from "./InfoNode";
+import { MessageNode } from "./MessageNode";
 import * as tools from "../../../tools";
 import { EmployeeNode } from "./EmployeeNode";
 import notes from "../data/notes.json";
@@ -17,7 +17,7 @@ const getInitialNodes = (): AppNode[] => {
 		nodes.push({
 			id: `${index + 1}`,
 			data: { label: _note, rotate },
-			type: "infoNode",
+			type: "messageNode",
 			position: { x, y },
 			height: 100,
 		});
@@ -51,6 +51,6 @@ const getInitialNodes = (): AppNode[] => {
 export const initialNodes: AppNode[] = getInitialNodes();
 
 export const nodeTypes: NodeTypes = {
-	infoNode: InfoNode,
+	messageNode: MessageNode,
 	employeeNode: EmployeeNode,
 };

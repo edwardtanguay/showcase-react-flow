@@ -1,6 +1,6 @@
 import type { Node } from "@xyflow/react";
 
-type InfoNodeType = {
+type MessageNodeType = {
 	label?: string;
 	rotate: string;
 };
@@ -15,6 +15,6 @@ type EmployeeNodeType = {
 	employee: Employee
 }
 
-export type InfoNode = Node<InfoNodeType, "infoNode">;
+export type MessageNode = Node<MessageNodeType, "messageNode">;
 export type EmployeeNode = Node<EmployeeNodeType, "employeeNode">;
-export type AppNode = InfoNode | EmployeeNode;
+export type AppNode = MessageNode | EmployeeNode;
