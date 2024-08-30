@@ -24,17 +24,24 @@ const getInitialNodes = (): AppNode[] => {
 		index++;
 	});
 
+	let count = 1;
 	employees.forEach((_employee) => {
-		const x = 5 * tools.getRandomNumberBetween(65, 80);
-		const y = 5 * tools.getRandomNumberBetween(5, 20);
+		const x = 350;
+		const y = 10 + count * 20;
 		nodes.push({
 			id: `${index + 1}`,
-			data: { employee: { firstName: _employee.firstName, lastName: _employee.lastName } },
+			data: {
+				employee: {
+					firstName: _employee.firstName,
+					lastName: _employee.lastName,
+				},
+			},
 			type: "employeeNode",
 			position: { x, y },
 			height: 100,
 		});
 		index++;
+		count++;
 	});
 
 	return nodes;
