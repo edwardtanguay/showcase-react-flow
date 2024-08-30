@@ -26,7 +26,7 @@ const getInitialNodes = (): AppNode[] => {
 
 	let count = 1;
 	employees.forEach((_employee) => {
-		const x = 350;
+		const x = 310 + ((count % 2 === 0 ? 1 : 2) * tools.getRandomNumberBetween(-20, 20));
 		const y = 10 + count * 20;
 		nodes.push({
 			id: `${index + 1}`,
