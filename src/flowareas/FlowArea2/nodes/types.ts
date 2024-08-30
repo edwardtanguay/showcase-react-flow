@@ -1,4 +1,4 @@
-import type { Node, BuiltInNode } from "@xyflow/react";
+import type { Node } from "@xyflow/react";
 
 type InfoNodeType = {
 	label?: string;
@@ -6,4 +6,4 @@ type InfoNodeType = {
 };
 
 export type InfoNode = Node<InfoNodeType, "infoNode">;
-export type AppNode = BuiltInNode | InfoNode;
+export type AppNode = InfoNode;
