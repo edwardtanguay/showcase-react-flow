@@ -32,6 +32,7 @@ const getInitialNodes = (): AppNode[] => {
 			id: `${index + 1}`,
 			data: {
 				employee: {
+					id: _employee.employeeID,
 					firstName: _employee.firstName,
 					lastName: _employee.lastName,
 				},
