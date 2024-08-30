@@ -11,12 +11,12 @@ export const initialNodes: AppNode[] = notes.map((note, index) => {
 	return {
 		id: `${index + 1}`,
 		data: { label: note, rotate },
-		type: "info-node",
+		type: "infoNode",
 		position: { x, y },
 		height: 100,
 	};
 });
 
-export const nodeTypes = {
-	"info-node": InfoNode,
-} satisfies NodeTypes;
+export const nodeTypes: NodeTypes = {
+	infoNode: InfoNode,
+};
