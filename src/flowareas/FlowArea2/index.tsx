@@ -11,6 +11,9 @@ import { initialNodes, nodeTypes } from "./nodes";
 import { initialEdges } from "./edges";
 import { FlowAreaWrapper } from "../FlowAreaWrapper";
 
+(async () => {
+	
+})();
 export const FlowArea2 = () => {
 	const [nodes, , onNodesChange] = useNodesState(initialNodes);
 	const [edges] = useEdgesState(initialEdges);
