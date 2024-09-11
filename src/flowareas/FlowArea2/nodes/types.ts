@@ -9,11 +9,11 @@ type Employee = {
 	id: number;
 	firstName: string;
 	lastName: string;
-}
+};
 
 type EmployeeNodeType = {
-	employee: Employee
-}
+	employee: Employee;
+};
 
 export type MessageNode = Node<MessageNodeType, "messageNode">;
 export type EmployeeNode = Node<EmployeeNodeType, "employeeNode">;

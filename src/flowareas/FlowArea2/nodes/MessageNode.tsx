@@ -9,6 +9,7 @@ export function MessageNode({
 	const label = !data.label ? 'no text' : data.label;
 	return (
 		<div
+			onClick={() => alert('111')}
 			style={{ boxShadow: "3px 3px 5px 0px #555", transform: `rotate(${data.rotate})` }}
 			className="p-1 border border-gray-400 shadow-2xl h-[8rem] w-[8rem] bg-yellow-100"
 		>
